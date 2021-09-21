@@ -1,9 +1,8 @@
 -- crear Medida
-create table Medida (
-id int identity (1,1) not null ,
-hora varchar(50) not null,
-valor int not null,
-lat varchar(20) not null,
-lon varchar(20) not null,
-primary key (id)
+CREATE TABLE "Medida" (
+    id INTEGER PRIMARY KEY,
+    fecha  TEXT NOT NULL,
+    valor   INTEGER NOT NULL,
+    lat  TEXT NOT NULL,
+	lon  TEXT NOT NULL
 );
