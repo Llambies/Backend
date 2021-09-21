@@ -86,3 +86,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+servidorREST/iniciarServer.bat
+
+.idea/dataSources.xml
