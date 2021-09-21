@@ -43,7 +43,7 @@ function crearDiv(hora, valor, lat, lon){
         "</div>"
 
 
-    console.log(div)
+    //console.log(div)
     return div;
 }
 
@@ -85,6 +85,7 @@ function listarMedidas(id) {
         .then(function (res) {
                 res.forEach(function (item) {
                     console.log(item)
+                    lista.innerHTML += crearDiv(item.fecha,item.valor,item.lat,item.lon);
                 })
             }
         )
