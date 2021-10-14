@@ -64,10 +64,31 @@ module.exports = class Logica {
     // <--
     // [{id:N, fecha:Texto,  valor:N,  lat:Texto,  lon:Texto}]
     // .................................................................
-    buscarMedida() {
-        let textoSQL = "select * from Medida ORDER BY id";
+    obtenerTodasLasMediciones() {
+        let textoSQL = "select * from Medida ORDER BY id ";
         return new Promise((resolver, rechazar) => {
             this.laConexion.all(textoSQL,
+                (err, res) => {
+                    (err ? rechazar(err) : resolver(res))
+                })
+        })
+
+    } // ()
+
+    // .................................................................
+    // N : cuantas
+    // -->
+    // buscarMedida() <--
+    // <--
+    // [{id:N, fecha:Texto,  valor:N,  lat:Texto,  lon:Texto}]
+    // .................................................................
+    obtenerUltimasMediciones(cuantas) {
+        let textoSQL = "select * from Medida ORDER BY id DESC LIMIT $cuantas ";
+        let valoresParaSQL = {
+            $cuantas: cuantas
+        }
+        return new Promise((resolver, rechazar) => {
+            this.laConexion.all(textoSQL, valoresParaSQL,
                 (err, res) => {
                     (err ? rechazar(err) : resolver(res))
                 })
