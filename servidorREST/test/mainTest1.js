@@ -1,6 +1,12 @@
-// ........................................................
-// mainTest1.js
-// ........................................................
+/**
+ *
+ * mainTest1.js
+ *
+ * AUTOR: Adrian Maldonado Llambies
+ * FECHA: 17/10/2021
+ * DESCRIPCION: Test de las reglas rest
+ *
+ */
 var request = require ('request')
 var assert = require ('assert')
 // ........................................................
@@ -19,7 +25,7 @@ describe( "Test 1 : Gestion de Medidas", function() {
 			function( err, respuesta, carga ) {
 				assert.equal( err, null, "¿Ha habido un error?" )
 				assert.equal( respuesta.statusCode, 200, "¿El código no es 200 (OK)" )
-				assert.equal( carga, '[{"dni":"1234A","nombre":"Pepe","apellidos":"Pérez Pérez"}]', "¿La carga no es Pepito?" )
+				assert.equal( carga, '[{"id":1,"fecha":"123","valor":44,"lat":"N","lon":"E"}]', "¿La carga no es el id 1?" )
 				hecho()
 			} // callback()
 		) // .get
@@ -29,7 +35,7 @@ describe( "Test 1 : Gestion de Medidas", function() {
 	// ....................................................
 	it( "probar POST /medida", function( hecho ) {
     let objdatosPersona =
-    { fecha : "ayer", valor : 34, lat : "23ºN", lon : "34ºS"}
+    { fecha : "124", valor : 34, lat : "23ºN", lon : "34ºS"}
     let datosPersona=JSON.stringify( objdatosPersona )
 		request.post(
       { url : IP_PUERTO+"/medida/"+datosPersona,

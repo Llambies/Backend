@@ -1,3 +1,13 @@
+/**
+ *
+ * mainScript.js
+ *
+ * AUTOR: Adrian Maldonado Llambies
+ * FECHA: 17/10/2021
+ * DESCRIPCION: Script que llama el html
+ *
+ */
+
 let lista;
 let select;
 

@@ -1,4 +1,12 @@
-
+/**
+ *
+ * logicaFake.js
+ *
+ * AUTOR: Adrian Maldonado Llambies
+ * FECHA: 17/10/2021
+ * DESCRIPCION: Clase logica del servidor
+ *
+ */
 
 
 class logicaFake{

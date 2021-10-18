@@ -1,6 +1,12 @@
-// .....................................................................
-// ReglasREST.js
-// .....................................................................
+/**
+ *
+ * ReglasREST.js
+ *
+ * AUTOR: Adrian Maldonado Llambies
+ * FECHA: 17/10/2021
+ * DESCRIPCION: Peticiones disponibles para el servidor rest
+ *
+ */
 module.exports.cargar = function (servidorExpress, laLogica) {
 
     // .......................................................

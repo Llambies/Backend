@@ -1,6 +1,12 @@
-// ........................................................
-// mainTest1.js
-// ........................................................
+/**
+ *
+ * mainTest1.js
+ *
+ * AUTOR: Adrian Maldonado Llambies
+ * FECHA: 17/10/2021
+ * DESCRIPCION: Test de la clase Logica
+ *
+ */
 const Logica = require("../Logica.js")
 var assert = require('assert')
 // ........................................................
@@ -33,7 +39,7 @@ describe("Test 1: insertar una medida", function () {
         async function () {
             await laLogica.insertarMedida(
                 {
-                    id : 1, fecha: "27-10-2020", valor: 44,
+                    id : 1, fecha: "123", valor: 44,
                     lat: "N", lon: "E"
                 })
             var res = await laLogica.obtenerTodasLasMediciones()
@@ -51,7 +57,7 @@ describe("Test 1: insertar una medida", function () {
             try {
                 await laLogica.insertarPersona(
                     {
-                        id : 1, fecha: "27-10-2020", valor: 44,
+                        id : 1, fecha: "1634522083911", valor: 44,
                         lat: "García", lon: "García"
                     })
             } catch (err) {
