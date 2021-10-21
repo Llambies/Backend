@@ -49,13 +49,20 @@ function llenarLista(medidas = []) {
  */
 function crearDiv(hora, valor, lat, lon) {
 
+
+    var date = new Date(parseInt(hora)); // create Date object
+
+    var options = { hour: 'numeric',minute:'numeric',second:'numeric', year: 'numeric', month: 'long', day: 'numeric' };
+
+
+
     let div;
     div = "<div class=\"card " + elegirTipo(valor) + " mb-3\">" +
         "<div class=\"card-body\">" +
         "<div class=\"row\">" +
-        "<div class=\"col-2 datoCentrado\">" + hora + "</div>" +
+        "<div class=\"col-4 datoCentrado\">" +date.toLocaleDateString("es-ES",options) + "</div>" +
         "<div class=\"col-2 datoCentrado\">" + valor + "</div>" +
-        "<div class=\"col-8\">" +
+        "<div class=\"col-4\">" +
         "<div class=\"vstack\">" +
         "<div>" + lat + "</div>" +
         "<div>" + lon + "</div>" +

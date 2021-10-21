@@ -15,10 +15,17 @@
             align-self: center;
         }
     </style>
+
+    <script> var timer = null;
+    function auto_reload()
+    {
+        top.location.href = 'index.html';
+    } </script>
+
     <script src="../logica/Medida.js"></script>
     <script src="logicaFake.js"></script>
 </head>
-<body>
+<body onload="timer = setTimeout('auto_reload()',7000);">
 
     <nav class="navbar cabecera bg-dark">
         <div class="container-fluid">
